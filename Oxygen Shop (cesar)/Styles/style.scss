@@ -123,15 +123,21 @@
 }
 
 #card-container {
+    display: flex;
+    flex-direction: column;
     width: 90%;
 }
 
 .card {
-    
+    display: flex;
+    flex-direction: row;
 }
 .card-text {
-    
+    text-align: start;
+}
 
+.card-img {
+    text-align: end;
 }
 
 .card-text h2 {

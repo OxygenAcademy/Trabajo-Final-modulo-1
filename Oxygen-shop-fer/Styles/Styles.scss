@@ -1,0 +1,40 @@
+@use "./variables";
+@use "./navbar";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+.webSection{
+  text-align: center;
+}
+
+.ContentTitle{
+
+    color: black;
+    font-family: var(--font-family-title);
+
+}
+
+.contentText{
+  font-family: var(--font-family-text);
+  font-size: 16px;
+}
+.shopBtn{
+
+    color: white;
+    background-color: var(--blue-color);
+    border-radius: 40px;
+    padding: 20px 30px;
+    border: none;
+    font-family: var(--font-family-text);
+    font-size: 1rem;
+    max-width: 440px;
+}

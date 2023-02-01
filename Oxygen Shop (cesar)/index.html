@@ -53,71 +53,104 @@
         </header>
 
         <!--Cards-->
-        <section id="card-container">
-            <div class="card">
-                <div class="card-text">
-                <h2>Be always first!</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate, soluta eaque, tenetur voluptatem, magnam corporis maiores possimus harum assumenda dolor ad alias minus! Sed fugiat quia similique ipsa excepturi!</p>
+        <div id="card-container">
+            <div class="card row">
+                <div class="card-text col">
+                    <h2>Be always first!</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate, soluta eaque, tenetur voluptatem, magnam corporis maiores possimus harum assumenda dolor ad alias minus! Sed fugiat quia similique ipsa excepturi!</p>
                 </div>
-                <div class="card-img">
+                <div class="card-img col">
                     <img src="Assets/img/macbook.png" alt="">
                 </div>
             </div>
-            <div class="card">
-                <div class="card-img">
+            <div class="card row">
+                <div class="card-img col">
                     <img src="Assets/img/iphone.png" alt="">
                 </div>
-                <div class="card-text">
-                <h2>Your shop is where you are!</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate, soluta eaque, tenetur voluptatem, magnam corporis maiores possimus harum assumenda dolor ad alias minus! Sed fugiat quia similique ipsa excepturi!</p>
+                <div class="card-text col">
+                    <h2>Your shop is where you are!</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate, soluta eaque, tenetur voluptatem, magnam corporis maiores possimus harum assumenda dolor ad alias minus! Sed fugiat quia similique ipsa excepturi!</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-text">
-                <h2>Increase recognition your brand!</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate, soluta eaque, tenetur voluptatem, magnam corporis maiores possimus harum assumenda dolor ad alias minus! Sed fugiat quia similique ipsa excepturi!</p>
+            <div class="card row">
+                <div class="card-text col">
+                    <h2>Increase recognition your brand!</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate, soluta eaque, tenetur voluptatem, magnam corporis maiores possimus harum assumenda dolor ad alias minus! Sed fugiat quia similique ipsa excepturi!</p>
                 </div>
-                <div class="card-img">
+                <div class="card-img col">
                     <img src="Assets/img/bg-trumpet.png" alt="">
                 </div>
             </div>
             
-        </section>
+        </div>
 
         <!--Pricing-->
-        <section>
+        <div id="pricing-container">
+
             <h2>Pricing</h2>
 
-            <select name="" id="">
-                <option value="">USD</option>
-                <option value="">EUR</option>
-                <option value="">GBP</option>
+            <select name="currency" id="currency">
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="gbp">GBP</option>
             </select>
 
-            <section>
-                <div>
-                    <h3>Basic</h3>
-                    <h2>$0</h2>
+            <div id="pricing-options">
+                <div class="basic-price-option">
+                    <div class="option-header">
+                        <h3>Basic</h3>
+                        <h2>$0</h2>
+                        <p></p>
+                    </div>
+                    <div class="option-services">
+                        <p><img src="/Assets/icons/check.svg">   100 MB HDD</p>
+                        <p><img src="/Assets/icons/check.svg">   1 Subdomain</p>
+                        <p><img src="/Assets/icons/check.svg">   2 E-mails</p>
+                        <p><img src="/Assets/icons/cross.svg">   Two years license</p>
+                        <p><img src="/Assets/icons/cross.svg">   Full support</p>
+                    </div>
+                    <button class="option-btn">Begin</button>
                 </div>
 
-                <div>
-                    <h3>Professional</h3>
-                    <h2>$25</h2>
-                    <p>Limited offer</p>
+                <div class="pro-price-option">
+                    <div class="option-header">
+                        <h3>Professional</h3>
+                        <h2>$25</h2>
+                        <p>Limited offer</p>
+                    </div>
+                    
+                    <div class="option-services">
+                        <p><img src="/Assets/icons/check.svg">   500 MB HDD</p>
+                        <p><img src="/Assets/icons/check.svg">   2 Subdomains</p>
+                        <p><img src="/Assets/icons/check.svg">   5 E-mails</p>
+                        <p><img src="/Assets/icons/check.svg">   One years license</p>
+                        <p><img src="/Assets/icons/cross.svg">   Full support</p>
+                    </div>
+                    <button class="option-btn">Begin</button>
                 </div>
                     
-                    <div>
+                <div class="premium-price-option">
+                    <div class="option-header">
                         <h3>Premium</h3>
                         <h2>$60</h2>
                         <p>Limited offer</p>
                     </div>
-                </section>
+                    <div class="option-services">
+                        <p><img src="/Assets/icons/check.svg">   500 MB HDD</p>
+                        <p><img src="/Assets/icons/check.svg">   2 Subdomains</p>
+                        <p><img src="/Assets/icons/check.svg">   5 E-mails</p>
+                        <p><img src="/Assets/icons/check.svg">   One years license</p>
+                        <p><img src="/Assets/icons/cross.svg">   Full support</p>
+                    </div>
+                    <button class="option-btn">Begin</button>
+                </div>
+            </div>
 
-        </section>
+        </div>
 
         <!--Carousel-->
-        <div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide w-100" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -163,44 +196,44 @@
         </div>
 
         <!--Form-->
-        <section>
-            <div>
+        <div id="form-container">
+            <div class="form-info">
                 <h2>Any questions?</h2>
                 <p>Leave your email or call us!</p>
-                <div>
-                    <img src="" alt=""><p></p>
-                    <img src="" alt=""><p></p>
+                <div class="info-icons">
+                    <img src="Assets/icons/message-icon.png" width="20" height="20" alt=""><p>info@bestshop.xyz</p>
+                    <img src="Assets/icons/phone-icon.png" width="20" height="20" alt=""><p>123 456 789</p>
                 </div>
             </div>
 
-            <div>
+            <div class="form">
                 <form action="">
                     <label for="name">NAME</label><br>
-                    <input id="name" name="name" type="text"><br>
+                    <input id="name" name="name" type="text"><br><br>
                     <label for="email">EMAIL</label><br>
-                    <input id="email" name="email" type="email"><br>
-                    <div class="row">
-                        <div class="col"><input class="col" id="consent" name="consent" type="checkbox"></div>
-                        <div class="col"><label  for="consent"><p>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p></label></div>
+                    <input id="email" name="email" type="email">
+                    <div class="check">
+                        <div class="tick"><input id="consent" name="consent" type="checkbox"></div>
+                        <div><label for="consent"><p>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p></label></div>
                     </div>
-                    
-                    
-                    
-                    <button></button>
+                    <button>Send</button>
                 </form>
             </div>
 
-        </section>
+        </div>
 
-        <!--Footer-->
-        <footer>
+        
+    </div>
+    <!--Footer-->
+    <footer id="footer-container">
+        <div class="footer-logo">
             <h2>OXYGEN Shop</h2>
             <p>2022 OXYGEN. All Rights Reserved</p>
-            <div>
-            <a href=""><img src="" alt="">Twitter</a>
-            <a href=""><img src="" alt="">Facebook</a>
-            </div>
-        </footer>
-    </div>
+        </div>
+        <div class="social-media">
+            <a href=""><img src="Assets/icons/Twitter.png" width="24" height="24" alt="Twitter"></a>
+            <a href=""><img src="Assets/icons/Facebook.png" width="24" height="24" alt="Facebook"></a>
+        </div>
+    </footer>
 </body>
 </html>

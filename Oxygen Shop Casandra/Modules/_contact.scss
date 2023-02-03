@@ -1,13 +1,10 @@
 @use '../Modules/color';
 
 //Contact
-@media only screen and (min-width: 1000px) {
+@media only screen and (max-width: 1000px) {
     .contact {
         display: flex;
         flex-flow: column;
-        width: 40vw;
-        max-width: 56rem;
-
         .contact-container {
             min-width: 50%;
         }
@@ -49,12 +46,31 @@
 
 }
 
-// @media only screen and (min-width: 1000px) {
-.form-contact {
-    display: flex;
-    flex-flow: column wrap;
-    width: 50%;
+@media only screen and (min-width: 1000px) {
+    .contact{
+        display: flex;
+        gap: 5em;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .form-contact {
+        display: flex;
+        flex-flow: column wrap;
+        width: 20%;
+    }
+
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+    
+    .checkbox-container{
+        margin-left: -9%;
+        margin-bottom: -8%;
+    }
 }
+
 
 .contact-name {
     font-family: 'Open Sans';
@@ -79,14 +95,11 @@
 }
 
 .data-protection {
-    position: relative;
-    margin-top: -6%;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    margin-left: 6%;
     color: #707070;
     max-width: 30rem;
 

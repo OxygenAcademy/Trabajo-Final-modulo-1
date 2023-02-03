@@ -121,7 +121,6 @@
         background-color: transparent;
         display: flex;
         gap: 4rem;
-
         border: 0;
 
         .frame {
@@ -136,6 +135,64 @@
         .card_description_3 {
             padding-left: 2%;
             background-color: var(--white-color);
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .section__benefit {
+        .card3-img {
+            display: flex;
+            flex-direction: column-reverse;
+            background-color: transparent;
+        }
+
+        .frame {
+            width: 100%;
+        }
+
+        .iphone-image {
+            width: 100%;
+        }
+
+        .rectangle-container {
+            position: relative;
+            margin-bottom: -38%;
+            right: -51%;
+        }
+
+        .macbook-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .rectangle {
+            width: 50%;
+        }
+
+
+        .macbook-image {
+            width: 100%;
+        }
+
+        .ellipse {
+            width: 50%;
+        }
+
+        .iphone-image {
+            width: 70%;
+        }
+
+        .ellipse-container {
+            position: relative;
+            margin-bottom: -38%;
+            right: -13%;
+        }
+
+        .iphone-container {
+            position: relative;
+            z-index: 1;
+            left: 17%;
         }
     }
 }

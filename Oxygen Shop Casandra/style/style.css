@@ -149,7 +149,7 @@
 
 .containerNav {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
   width: 100%;
   top: 0px;
@@ -403,6 +403,50 @@
     background-color: var(--white-color);
   }
 }
+@media only screen and (max-width: 1000px) {
+  .section__benefit .card3-img {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: transparent;
+  }
+  .section__benefit .frame {
+    width: 100%;
+  }
+  .section__benefit .iphone-image {
+    width: 100%;
+  }
+  .section__benefit .rectangle-container {
+    position: relative;
+    margin-bottom: -38%;
+    right: -51%;
+  }
+  .section__benefit .macbook-container {
+    position: relative;
+    z-index: 1;
+  }
+  .section__benefit .rectangle {
+    width: 50%;
+  }
+  .section__benefit .macbook-image {
+    width: 100%;
+  }
+  .section__benefit .ellipse {
+    width: 50%;
+  }
+  .section__benefit .iphone-image {
+    width: 70%;
+  }
+  .section__benefit .ellipse-container {
+    position: relative;
+    margin-bottom: -38%;
+    right: -13%;
+  }
+  .section__benefit .iphone-container {
+    position: relative;
+    z-index: 1;
+    left: 17%;
+  }
+}
 @media only screen and (min-width: 1000px) {
   .price_content {
     display: flex;
@@ -471,12 +515,10 @@
     margin-top: 17px;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .contact {
     display: flex;
     flex-flow: column;
-    width: 40vw;
-    max-width: 56rem;
   }
   .contact .contact-container {
     min-width: 50%;
@@ -512,12 +554,28 @@
     color: #A5A5A5;
   }
 }
-.form-contact {
-  display: flex;
-  flex-flow: column wrap;
-  width: 50%;
+@media only screen and (min-width: 1000px) {
+  .contact {
+    display: flex;
+    gap: 5em;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .form-contact {
+    display: flex;
+    flex-flow: column wrap;
+    width: 20%;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  .checkbox-container {
+    margin-left: -9%;
+    margin-bottom: -8%;
+  }
 }
-
 .contact-name {
   font-family: "Open Sans";
   font-style: normal;
@@ -539,14 +597,11 @@
 }
 
 .data-protection {
-  position: relative;
-  margin-top: -6%;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  margin-left: 6%;
   color: #707070;
   max-width: 30rem;
 }

@@ -85,8 +85,12 @@
 
         <section class="section__benefit" id="benefit-background">
             <div class="card1-img">
-                <img class="rectangle" src="assets/img/Rectangle.png" alt="Red rectagle">
-                <img class="macbook-image" src="assets/img/Macbook.png" alt="Macbook laptop">
+                <div class="rectangle-container">
+                    <img class="rectangle" src="assets/img/Rectangle.png" alt="Red rectagle">
+                </div>
+                <div class="macbook-container">
+                    <img class="macbook-image" src="assets/img/Macbook.png" alt="Macbook laptop">
+                </div>
                 <div class="card_description">
                     <h2 class="card-title">Be always first</h2>
                     <p class="text card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -97,8 +101,12 @@
                 </div>
             </div>
             <div class="card2-img">
-                <img class="ellipse" src="assets/img/Ellipse4.png" alt="Ellipse">
-                <img class="iphone-image" src="assets/img/iphone.png" alt="Iphone">
+                <div class="ellipse-container">
+                    <img class="ellipse" src="assets/img/Ellipse4.png" alt="Ellipse">
+                </div>
+                <div class="iphone-container">
+                    <img class="iphone-image" src="assets/img/iphone.png" alt="Iphone">
+                </div>
                 <div class="card_description">
                     <h2 class="card-title">Be always first</h2>
                     <p class="text card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -287,35 +295,34 @@
 
         <!-- Contact -->
         <section>
-            <div class="row">
-                <div class="col-md-3 offset-md-3">
-                    <div class=" contact " id="contact">
-                        <div class="contact-container ">
-                            <h2 class="contact-1">Any questions?</h2>
-                            <p class="contact-2">Leave your email address or call us!</p>
-                            <div class="flex-container">
-                                <img src="assets/icons/sms.png" alt="email">
-                                <p class="p_email">info@bestshop.xyz</p>
-                                <img src="assets/icons/Phone.png" alt="telephone">
-                                <p class="p_email">123 456 789</p>
-                            </div>
-                        </div>
+            <div class="contact">
+                <div class=" contact-text" id="contact">
+                    <h2 class="contact-1">Any questions?</h2>
+                    <p class="contact-2">Leave your email address or call us!</p>
+                    <div class="flex-container">
+                        <img src="assets/icons/sms.png" alt="email">
+                        <p class="p_email">info@bestshop.xyz</p>
+                        <img src="assets/icons/Phone.png" alt="telephone">
+                        <p class="p_email">123 456 789</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="form-contact ">
-                        <form action="">
-                            <div>
-                                <label class="contact-name">NAME</label>
-                                <input type="text" id="input-name" required>
-                            </div>
-                            <div>
-                                <label class="contact-email">EMAIL</label>
-                                <input type="text" id="input-email" class="input-email" required>
-                            </div>
-                        </form>
-                        <div class="form-contact-polity">
+                <div class="form-contact ">
+                    <form action="">
+                        <div>
+                            <label class="contact-name">NAME</label>
+                            <input type="text" id="input-name" required>
+                        </div>
+                        <div>
+                            <label class="contact-email">EMAIL</label>
+                            <input type="text" id="input-email" class="input-email" required>
+                        </div>
+                    </form>
+                    <div class="form-contact-polity">
+                        <div class="checkbox-container">
                             <input class="check" type="checkbox">
+                        </div>
+                        <div>
+
                             <label for="check-data" class="label-data-proteccion">
                                 <p class="data-protection">
                                     I hereby give consent for my personal
@@ -329,11 +336,11 @@
                                 </p>
                             </label>
                         </div>
-                        <div class="btn-submit-container">
-                            <button class="btn-submit" type="submit">
-                                <p class="btn-send">Send</p>
-                            </button>
-                        </div>
+                    </div>
+                    <div class="btn-submit-container">
+                        <button class="btn-submit" type="submit">
+                            <p class="btn-send">Send</p>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -353,7 +360,7 @@
             </div>
         </footer>
     </div>
-
+        
 </body>
 
 </html>

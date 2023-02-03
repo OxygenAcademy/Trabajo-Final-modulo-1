@@ -67,9 +67,6 @@
 
     }
 
-  
-
-
     .btn-a {
         display: block;
         width: 310px;
@@ -99,33 +96,33 @@
 
 // vector
 @media only screen and (min-width: 1000px) {
-.popular_vector {
-    margin-top: 50px;
-    padding-bottom: 5%;
-}
+    .popular_vector {
+        margin-top: 50px;
+        padding-bottom: 5%;
+    }
 
-.numbers {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 5.96px;
-    color: var(--black-color);
+    .numbers {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 5.96px;
+        color: var(--black-color);
 
-}
+    }
 
-.phrase {
-    font-family: ''Raleway'';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    text-align: center;
-    color: var(--gray-color);
-    margin-top: 10px;
+    .phrase {
+        font-family: '' Raleway'';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 20px;
+        text-align: center;
+        color: var(--gray-color);
+        margin-top: 10px;
 
-}
+    }
 
 }

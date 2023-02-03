@@ -1,0 +1,140 @@
+@use '../Modules/color';
+
+// Cards, image
+#benefit-background {
+    background: #F7F7F7;
+    padding: 5%;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    //card Styles
+    .card-text {
+        font-family: 'Open Sans';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: --var(--black-color);
+        left: 0px;
+        top: 72px;
+    }
+
+    .card-title {
+
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        color: #000000;
+        margin-top: 10%;
+    }
+
+    .card_description {
+        margin: 5% 15% 5% 5%;
+        width: 35%;
+    }
+}
+
+ @media only screen and (min-width: 1000px) {
+    .card1-img {
+        background: #FFFFFF;
+        border: 1px solid #E8E9ED;
+        border-radius: 5px;
+        display: flex;
+        flex-flow: wrap;
+        // flex-direction: column;
+        position: relative;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding: 2%;
+
+        .rectangle {
+            position: absolute;
+            margin: auto;
+            width: 13vw;
+            z-index: 0;
+            left: 66%;
+            margin-top: 4%;
+            transform: translate(-12%, -20%);
+        }
+
+        .macbook-image {
+            z-index: 0;
+            position: absolute;
+            width: 19vw;
+            left: 64%;
+            transform: translate(-50%);
+            margin-top: 4%;
+        }
+
+    }
+
+ }
+
+@media only screen and (min-width: 1000px) {
+    .card2-img {
+        background: #FFFFFF;
+        border: 1px solid #E8E9ED;
+        border-radius: 5px;
+        display: flex;
+        flex-flow: wrap;
+        flex-direction: row-reverse;
+        margin-top: 2%;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding: 2%;
+
+
+        .ellipse {
+            position: absolute;
+            margin: auto;
+            width: 13vw;
+            z-index: 0;
+            left: 28%;
+            margin-top: 4%;
+            transform: translate(-12%, -20%);
+        }
+
+        .iphone-image {
+            z-index: 0;
+            position: absolute;
+            width: 17vw;
+            left: 36%;
+            transform: translate(-50%);
+            margin-top: 3%;
+
+        }
+    }
+}
+@media only screen and (min-width: 1000px) {
+.card3-img {
+    background: #FFFFFF;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    flex-direction: row-reverse;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+    background-color: transparent;
+    display: flex;
+    gap: 4rem;
+ 
+    border: 0;
+
+    .frame {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 24.5vw;
+        position: relative;
+
+    }
+    .card_description_3{
+        padding-left: 2%;
+        background-color: var(--white-color);
+    }
+}
+}

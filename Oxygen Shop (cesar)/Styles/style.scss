@@ -1,24 +1,27 @@
-@use "/Modules/_colors";
+//@use "/Modules/_colors";
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400&display=swap');
 
-
+@mixin fonts($font, $size, $weight) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+}
 
 //Body
+/*Centrar, ordenar los contenedores en columna como elementos flex*/
 body {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--general-bg-color);
 }
-
+/*Contenedor del menú + sub-header*/
 #header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+/*Barra fixed del top con logo + links*/
 #nav-menu {
   background-color: var(--section-bg-color);
   display: flex;
@@ -29,15 +32,13 @@ body {
   position: fixed;
   width: 100%;
   height: 7%;
-  z-index: 2;
+  z-index: 2; /*Porque las imágenes solapadas tienen z-index 1*/
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
 }
 
 #logo {
   padding-left: 10%;
-  font-family: "Raleway", sans-serif;
-  font-size: 32px;
-  font-weight: 300;
+  @include fonts("Raleway", 32px, 300);
   color: var(--oxygen-blue);
 }
 
@@ -49,9 +50,7 @@ body {
 }
 
 .menu-item {
-  font-family: "Open Sans", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
+  @include fonts("Open Sans", 11px, 700);
   text-decoration: none;
   color: var(--menu-gray);
   letter-spacing: 3.28px;
@@ -70,35 +69,28 @@ body {
   transition: color 0.4s ease-in;
   cursor: pointer;
 }
-
+/*Imagen + sección why us*/
 #sub-header {
   background-color: var(--section-bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   padding-top: 15%;
 }
 
 #sub-header h2 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 49px;
+  @include fonts("Raleway", 49px, 400);
   color: black;
 }
 
 #sub-header h3 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
+  @include fonts("Raleway", 36px, 400);
   color: black;
 }
 
 #sub-header p {
   margin-top: 1%;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
+  @include fonts("Open Sans", 16px, 400);
   color: black;
 }
 
@@ -119,19 +111,20 @@ body {
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.5);
 }
 
-#header-images {
+#sub-header-images {
   display: flex;
   justify-content: space-around;
 }
 
-#header-images img {
+#sub-header-images img {
   padding: 20% 15%;
 }
-
+/*Secciones hasta el footer*/
 #middle-content {
   width: 90%;
+  background: var(--general-bg-color);
 }
-
+/*Sección de cartas horizontales*/
 #carta-container {
   margin-top: 15%;
   width: 80%;
@@ -156,7 +149,17 @@ body {
 #carta-tercera {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+}
+
+.texto-tercera {
+  width: 90%;
+}
+
+.img-tercera {
+  background-image: url(/Assets/img/Rectangle\ 6.png);
+  background-size: cover;
+  width: 10%;
+  margin-left: 5%;
 }
 
 .carta-text {
@@ -166,15 +169,11 @@ body {
 }
 
 .carta-text h2 {
-  font-family: "Raleway", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
+  @include fonts("Raleway", 32px, 400);
 }
 
 .carta-text p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  @include fonts("Open Sans", 16px, 400);
 }
 
 #red-border {
@@ -198,6 +197,7 @@ body {
 
 #rombo-img {
   position: relative;
+  width: 40%;
   right: 12%;
   bottom: 1em;
 }
@@ -205,15 +205,15 @@ body {
 #mac-img {
   position: relative;
   margin: auto;
+  width: 60%;
   top: 2em;
-  left: 20%;
+  left: 18%;
   z-index: 1;
 }
 
 #circ-img {
   position: relative;
   width: 50%;
-  
   left: 3em;
 }
 
@@ -226,24 +226,10 @@ body {
   z-index: 1;
 }
 
-.img-tercera {
-  position: relative;
-  height: 25em;
-  left: 3%;
-  top: 4.5em;
-}
-#rectangle-img {
-  position: relative;
-}
-
 #trumpet-img {
-  position: relative;
-  margin: auto;
-  width: 50%;
-  right: 68%;
-  z-index: 1;
+  margin: 0 auto;
 }
-
+/*Sección precios y servicios*/
 #pricing-container {
   padding-top: 10%;
   display: flex;
@@ -251,12 +237,11 @@ body {
   align-items: center;
   flex-wrap: wrap;
   background-color: var(--section-bg-color);
+  padding-bottom: 20%; /*para que se vea blanco hasta el carrousel*/
 }
 
 #pricing-container h2 {
-  font-family: "Raleway";
-  font-weight: 400;
-  font-size: 36px;
+  @include fonts("Raleway", 36px, 400);
 }
 
 #pricing-options {
@@ -271,24 +256,18 @@ body {
 
 .option-header h3 {
   padding-top: 10%;
-  font-family: "Raleway";
-  font-size: 20px;
-  font-weight: 700;
+  @include fonts("Raleway", 20px, 700);
   text-align: center;
   padding-bottom: 1%;
 }
 
 .option-header h2 {
-  font-family: "Open Sans";
-  font-size: 46px;
-  font-weight: 300;
+  @include fonts("Open Sans", 46px, 300);
   text-align: center;
 }
 
 .option-header p {
-  font-family: "Raleway";
-  font-size: 12px;
-  font-weight: 700;
+  @include fonts("Raleway", 12px, 700);
   text-align: center;
 }
 
@@ -303,9 +282,7 @@ body {
   height: 11%;
   border-radius: 23px;
   color: var(--section-bg-color);
-  font-family: "Open Sans";
-  font-weight: 700;
-  font-size: 13px;
+  @include fonts("Open Sans", 13px, 700);
   border-width: 0;
 }
 
@@ -386,12 +363,13 @@ body {
   box-shadow: 5px 10px 27px var(--oxygen-green-color);
   transition: box-shadow 0.4s linear;
 }
-
+/*Carrousel imágenes*/
 #carousel {
+  background-color: var(--section-bg-color);
   width: 100%;
-  margin: 20% auto 0 auto;
+  margin: 0 auto;
 }
-
+/*Sección contacto*/
 #form-container {
   padding-top: 10%;
   display: flex;
@@ -410,16 +388,12 @@ body {
 }
 
 #form-info h2 {
-  font-family: "Raleway";
-  font-size: 49px;
-  font-weight: 400;
+  @include fonts("Raleway", 49px, 400);
 }
 
 #form-info p {
   padding-top: 3%;
-  font-family: "Open Sans";
-  font-size: 16px;
-  font-weight: 400;
+  @include fonts("Open Sans", 16px, 400);
 }
 
 #info-icons {
@@ -431,18 +405,14 @@ body {
 }
 
 #info-icons p {
-  font-family: "Open Sans";
-  font-size: 16px;
-  font-weight: 600;
+  @include fonts("Open Sans", 16px, 600);
   color: var(--menu-gray);
   padding: 0 2%;
 }
 
 #form {
   width: 50%;
-  font-family: "Open Sans";
-  font-size: 11px;
-  font-weight: 600;
+  @include fonts("Open Sans", 11px, 600);
   letter-spacing: 3.28px;
   color: var(--oxygen-blue);
   padding-bottom: 10%;
@@ -453,8 +423,7 @@ body {
   padding-top: 5%;
   display: flex;
   flex-direction: row;
-  font-size: 12px;
-  font-weight: 400;
+  @include fonts("Open Sans", 12px, 400);
   letter-spacing: 0px;
   color: #707070;
   width: 70%;
@@ -467,9 +436,7 @@ body {
 }
 
 #form button {
-  font-family: "Open Sans";
-  font-size: 13px;
-  font-weight: 700;
+  @include fonts("Open Sans", 13px, 700);
   height: 4.5em;
   width: 36%;
   border-radius: 35px;
@@ -483,7 +450,7 @@ body {
   transition: box-shadow 0.4s ease-in-out;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.5);
 }
-
+/*Contenedor footer*/
 #footer-container {
   display: flex;
   flex-direction: row;
@@ -503,23 +470,19 @@ body {
 }
 
 #footer-logo h2 {
-  font-family: "Raleway";
-  font-size: 26px;
-  font-weight: 300;
+  @include fonts("Raleway", 26px, 300);
   color: var(--oxygen-blue);
 }
 
 #footer-logo p {
-  font-family: "Open Sans";
-  font-size: 11px;
-  font-weight: 400;
+  @include fonts("Open Sans", 11px, 400);
   color: var(--menu-gray);
 }
 
 #social-media {
   margin-right: 10%;
 }
-
+/*Estilo de los inputs del formulario*/
 input[type=text] {
   border: none;
   border-bottom: 1px solid #95989A;
@@ -537,6 +500,7 @@ input[type=checkbox] {
   width: 2em;
 
 }
+/*Elementos en vertical en el corte de resolución 1000px*/
 @media screen and (max-width: 1000px) { 
 
   #header-images {
@@ -554,6 +518,7 @@ input[type=checkbox] {
     justify-content: space-evenly;
     align-items: center;
     flex-shrink: 1;
+    overflow: hidden;
   }
   .carta-imgs{
     flex-shrink: 10;
@@ -567,16 +532,18 @@ input[type=checkbox] {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    overflow: hidden;
   }
 
   .img-tercera {
-    margin-bottom: 10%;
-    width: 70%;
-    flex-shrink: 1;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
   }
 
-  #trumpet-img {
-    position: relative;
+  .texto-tercera {
+    height: 20em;
+    width: auto;
   }
 
   #pricing-options {
@@ -598,11 +565,5 @@ input[type=checkbox] {
     flex-direction: column;
     align-items: center;
   }
-
-  
-  
-  /* .tick p {
-    overflow: scroll;
-  } */
 
 }

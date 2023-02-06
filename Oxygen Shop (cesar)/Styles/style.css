@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400&display=swap");
 :root {
   --general-bg-color: #F7F7F7;
@@ -8,22 +9,22 @@
   --card-border-color: #E8E9ED;
   --oxygen-red-color: #FB3B64;
   --oxygen-green-color: #55DFB4;
-}
-
+} 
+/*Centrar, ordenar los contenedores en columna como elementos flex*/
 body {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--general-bg-color);
 }
 
+/*Contenedor del menú + sub-header*/
 #header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/*Barra fixed del top con logo + links*/
 #nav-menu {
   background-color: var(--section-bg-color);
   display: flex;
@@ -34,13 +35,13 @@ body {
   position: fixed;
   width: 100%;
   height: 7%;
-  z-index: 2;
+  z-index: 2; /*Porque las imágenes solapadas tienen z-index 1*/
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
 }
 
 #logo {
   padding-left: 10%;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway";
   font-size: 32px;
   font-weight: 300;
   color: var(--oxygen-blue);
@@ -54,7 +55,7 @@ body {
 }
 
 .menu-item {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 11px;
   font-weight: 700;
   text-decoration: none;
@@ -66,7 +67,7 @@ body {
   color: black;
   text-decoration: underline;
   -webkit-text-decoration-color: var(--oxygen-blue);
-          text-decoration-color: var(--oxygen-blue);
+  text-decoration-color: var(--oxygen-blue);
   text-decoration-thickness: 3px;
   text-underline-offset: 230%;
   transition: -webkit-text-decoration 1s ease-in;
@@ -76,34 +77,34 @@ body {
   cursor: pointer;
 }
 
+/*Imagen + sección why us*/
 #sub-header {
   background-color: var(--section-bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   padding-top: 15%;
 }
 
 #sub-header h2 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
+  font-family: "Raleway";
   font-size: 49px;
+  font-weight: 400;
   color: black;
 }
 
 #sub-header h3 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
+  font-family: "Raleway";
   font-size: 36px;
+  font-weight: 400;
   color: black;
 }
 
 #sub-header p {
   margin-top: 1%;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+  font-family: "Open Sans";
   font-size: 16px;
+  font-weight: 400;
   color: black;
 }
 
@@ -124,19 +125,22 @@ body {
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.5);
 }
 
-#header-images {
+#sub-header-images {
   display: flex;
   justify-content: space-around;
 }
 
-#header-images img {
+#sub-header-images img {
   padding: 20% 15%;
 }
 
+/*Secciones hasta el footer*/
 #middle-content {
   width: 90%;
+  background: var(--general-bg-color);
 }
 
+/*Sección de cartas horizontales*/
 #carta-container {
   margin-top: 15%;
   width: 80%;
@@ -161,7 +165,17 @@ body {
 #carta-tercera {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+}
+
+.texto-tercera {
+  width: 90%;
+}
+
+.img-tercera {
+  background-image: url(/Assets/img/Rectangle\ 6.png);
+  background-size: cover;
+  width: 10%;
+  margin-left: 5%;
 }
 
 .carta-text {
@@ -171,13 +185,13 @@ body {
 }
 
 .carta-text h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway";
   font-size: 32px;
   font-weight: 400;
 }
 
 .carta-text p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 16px;
   font-weight: 400;
 }
@@ -203,6 +217,7 @@ body {
 
 #rombo-img {
   position: relative;
+  width: 40%;
   right: 12%;
   bottom: 1em;
 }
@@ -210,15 +225,15 @@ body {
 #mac-img {
   position: relative;
   margin: auto;
+  width: 60%;
   top: 2em;
-  left: 20%;
+  left: 18%;
   z-index: 1;
 }
 
 #circ-img {
   position: relative;
   width: 50%;
-  
   left: 3em;
 }
 
@@ -231,24 +246,11 @@ body {
   z-index: 1;
 }
 
-.img-tercera {
-  position: relative;
-  height: 25em;
-  left: 3%;
-  top: 4.5em;
-}
-#rectangle-img {
-  position: relative;
-}
-
 #trumpet-img {
-  position: relative;
-  margin: auto;
-  width: 50%;
-  right: 68%;
-  z-index: 1;
+  margin: 0 auto;
 }
 
+/*Sección precios y servicios*/
 #pricing-container {
   padding-top: 10%;
   display: flex;
@@ -256,12 +258,13 @@ body {
   align-items: center;
   flex-wrap: wrap;
   background-color: var(--section-bg-color);
+  padding-bottom: 20%; /*para que se vea blanco hasta el carrousel*/
 }
 
 #pricing-container h2 {
   font-family: "Raleway";
-  font-weight: 400;
   font-size: 36px;
+  font-weight: 400;
 }
 
 #pricing-options {
@@ -309,8 +312,8 @@ body {
   border-radius: 23px;
   color: var(--section-bg-color);
   font-family: "Open Sans";
-  font-weight: 700;
   font-size: 13px;
+  font-weight: 700;
   border-width: 0;
 }
 
@@ -318,10 +321,12 @@ body {
   box-shadow: 5px 10px 27px var(--oxygen-red-color);
   transition: box-shadow 0.4s linear;
 }
+
 .pro-style button:hover {
   box-shadow: 5px 10px 27px var(--oxygen-blue);
   transition: box-shadow 0.4s linear;
 }
+
 .premium-style button:hover {
   box-shadow: 5px 10px 27px var(--oxygen-green-color);
   transition: box-shadow 0.4s linear;
@@ -392,11 +397,14 @@ body {
   transition: box-shadow 0.4s linear;
 }
 
+/*Carrousel imágenes*/
 #carousel {
+  background-color: var(--section-bg-color);
   width: 100%;
-  margin: 20% auto 0 auto;
+  margin: 0 auto;
 }
 
+/*Sección contacto*/
 #form-container {
   padding-top: 10%;
   display: flex;
@@ -458,6 +466,7 @@ body {
   padding-top: 5%;
   display: flex;
   flex-direction: row;
+  font-family: "Open Sans";
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0px;
@@ -489,6 +498,7 @@ body {
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.5);
 }
 
+/*Contenedor footer*/
 #footer-container {
   display: flex;
   flex-direction: row;
@@ -525,6 +535,7 @@ body {
   margin-right: 10%;
 }
 
+/*Estilo de los inputs del formulario*/
 input[type=text] {
   border: none;
   border-bottom: 1px solid #95989A;
@@ -540,10 +551,10 @@ input[type=email] {
 input[type=checkbox] {
   height: 2em;
   width: 2em;
-
 }
-@media screen and (max-width: 1000px) { 
 
+/*Elementos en vertical en el corte de resolución 1000px*/
+@media screen and (max-width: 1000px) {
   #header-images {
     margin: 0;
     display: flex;
@@ -551,7 +562,6 @@ input[type=checkbox] {
     width: auto;
     align-items: center;
   }
-
   .carta {
     height: 70vw;
     display: flex;
@@ -559,37 +569,35 @@ input[type=checkbox] {
     justify-content: space-evenly;
     align-items: center;
     flex-shrink: 1;
+    overflow: hidden;
   }
-  .carta-imgs{
+  .carta-imgs {
     flex-shrink: 10;
     width: auto;
   }
   .carta-text {
     width: auto;
   }
-
   #carta-tercera {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    overflow: hidden;
   }
-
   .img-tercera {
-    margin-bottom: 10%;
-    width: 70%;
-    flex-shrink: 1;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
   }
-
-  #trumpet-img {
-    position: relative;
+  .texto-tercera {
+    height: 20em;
+    width: auto;
   }
-
   #pricing-options {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .price-option {
     margin-bottom: 5%;
     max-height: 461px;
@@ -597,17 +605,9 @@ input[type=checkbox] {
     width: 70%;
     border-radius: 18px;
   }
-  
   #form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
-  
-  
-  /* .tick p {
-    overflow: scroll;
-  } */
-
-}
+}/*# sourceMappingURL=style.css.map */
